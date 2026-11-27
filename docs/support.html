@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>点検アプリ サポート</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 24px 16px 48px; font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+         font-size: 16px; line-height: 1.8; background: #ffffff; color: #1f1f1f; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 22px; line-height: 1.4; margin: 0 0 8px; }
+  h2 { font-size: 17px; margin: 28px 0 8px; }
+  p { margin: 0 0 8px; }
+  ul { margin: 0 0 8px; padding-left: 0; list-style: none; }
+  li { margin: 0 0 6px; }
+  .meta { color: #555555; }
+  h3 { font-size: 16px; margin: 20px 0 6px; }
+  ol { margin: 0 0 8px; padding-left: 1.5em; }
+  code { font-family: ui-monospace, Menlo, monospace; }
+  a { color: #0b57d0; }
+  hr { margin: 32px 0; border: none; border-top: 1px solid #cccccc; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #121212; color: #e6e6e6; }
+    .meta { color: #aaaaaa; }
+    hr { border-top-color: #444444; }
+    a { color: #8ab4f8; }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>サポート</h1>
+<p class="meta">最終更新日: 2026年11月26日</p>
+<p>本アプリは、設備の日常点検をスマートフォン・タブレットで記録するための社内向けアプリです。</p>
+<p>組織が管理する端末に配布して使います。</p>
+<h2>できること</h2>
+<ul>
+<li>Excel で作った点検項目表を取り込み、点検の画面を作ります</li>
+<li>7つの形式で入力できます（数値・チェック2択・チェック3択・カスタム・トグル・テキスト・計算）</li>
+<li>基準値の範囲を外れた値を、入力したその場で知らせます</li>
+<li>前回の値との差を表示します。数値の項目は傾向グラフで、文字や選択の項目は一覧で、過去の記録を見られます</li>
+<li>点検が終わったら、点検の値を入れた Excel の点検表を作り、共有メニューから保存・送付できます</li>
+<li>外部と通信しないため、電波の届かない場所でも使えます</li>
+</ul>
+<h2>はじめて使うとき</h2>
+<ol>
+<li>ホームの「点検表を追加」を押します</li>
+<li>点検表の名前を入れ、「点検項目表」と「出力テンプレート」の Excel をそれぞれ選びます（どちらも、同じ画面から見本のファイルをダウンロードできます）</li>
+<li>「点検表を保存」を押します</li>
+<li>ホーム右上の人のアイコン（点検者管理）で、点検する人の名前を登録します</li>
+<li>ホームで点検表を押し、「新たな点検開始」→ 点検日と点検者を選ぶ →「点検を開始する」を押します</li>
+<li>入力が終わったら右上の「保存」を押し、「結果を共有する」で保存先を選びます</li>
+</ol>
+<p>入力の途中でアプリを閉じても、内容は自動で一時保存されます。続きはホームの「一時保存」から開けます。</p>
+<h2>よくある質問</h2>
+<h3>点検項目表（Excel）を取り込めません</h3>
+<ul>
+<li>「保存できません」と出たときは、画面に出た行を直してから、もう一度取り込んでください。施設ID・機器ID・反映コードが空欄の行や、同じ反映コードが2つある行があると、取り込めません</li>
+<li>「取込内容に注意があります」と出たときは、書かれている内容を確かめてください。直してから取り込み直すことも、そのまま保存することもできます</li>
+<li>書き方は、見本のファイルの中にある使い方のシートを見てください</li>
+</ul>
+<h3>入力した記録はどこに保存されますか</h3>
+<p>使っている端末の中に保存されます。インターネット上のサーバーには送りません。</p>
+<ul>
+<li>端末の設定で iCloud バックアップなどの端末のバックアップを有効にしている場合は、記録が端末のバックアップに含まれることがあります</li>
+<li>アプリを削除すると、端末の中の記録もすべて消えます。アプリの機能で元に戻すことはできません</li>
+<li>記録を別の端末へ移す機能はありません</li>
+<li>古い記録は、「履歴管理」の画面（ホーム右上の時計のアイコン）で決めた保存期間を過ぎると、自動で削除されます</li>
+</ul>
+<h3>範囲外の知らせが出ません／緑の「範囲内」が出ません</h3>
+<ul>
+<li>点検項目表の基準値（下限・上限）は、半角の数字だけで書いてください。単位は「単位」の列に書きます</li>
+<li><code>0.5MPa</code> のような単位つきの値や、全角の数字（<code>０．５</code>）は数字として読めないため、範囲の判定をしません</li>
+<li>入力形式が「数値」になっているかも確かめてください</li>
+</ul>
+<h3>前回値やグラフが空です</h3>
+<p>記録は端末ごとに保存されるため、ほかの人が別の端末で入力した値は、自動では表示されません。次のどちらかで取り込めます。</p>
+<ul>
+<li>点検画面の「Excel読込」で、前回の点検で作った Excel の点検表を選ぶ</li>
+<li>管理者から配られた CSV ファイルを、「履歴管理」の画面から取り込む</li>
+</ul>
+<p>使い始めたばかりのときは、空のままで正常です。</p>
+<h3>間違えた値で保存してしまいました</h3>
+<p>ホームの点検表から「保存済み」の点検を開いて直し、もう一度「保存」と「結果を共有する」を行ってください。新しく点検を始め直すと、別の点検として両方が残ります。</p>
+<h3>「保存できませんでした」と出ました</h3>
+<p>入力した内容は消えていません。画面を閉じずに、もう一度「保存」を押してください。何度押しても保存できないときは、端末の空き容量が足りないことがあります。</p>
+<h3>不具合を知らせたいとき</h3>
+<p>「履歴管理」の画面の「不具合ログの共有」で「ログを共有」を押し、記録をお問い合わせ先へ送ってください。この記録に入るのは、エラーの内容と日時です。</p>
+<h2>お問い合わせ</h2>
+<p>本アプリについてのご質問・不具合のご連絡は、本アプリを配布した社内の担当部署へお願いします。</p>
+<p>連絡先: digital-tool@swing-w.com</p>
+<p>次のことをお知らせいただくと、早く調べられます。</p>
+<ul>
+<li>端末の機種と OS のバージョン</li>
+<li>いつ、どの画面で、何をしたときに、何が起きたか</li>
+<li>不具合ログ（上の「不具合を知らせたいとき」の方法で送れます）</li>
+</ul>
+<h2>プライバシーポリシー</h2>
+<p>本アプリは、利用者の情報を外部へ送信・収集しません。詳しくはプライバシーポリシーをご覧ください。</p>
+<p><a href="privacy.html">プライバシーポリシー</a></p>
+<hr>
+<h2>Support (English)</h2>
+<p>This app is an internal tool for recording daily equipment inspections on iPhone and iPad. It is distributed to devices managed by the organization.</p>
+<ul>
+<li>Import an inspection item sheet (Excel), enter values in seven input types, and see out-of-range alerts, previous values, and trend charts.</li>
+<li>When an inspection is finished, the app creates an Excel report that you can save or send from the share sheet.</li>
+<li>All records are stored only on the device. The app does not communicate with any server and requires no login.</li>
+</ul>
+<p>For questions or problem reports, please contact the department in your organization that distributed this app. To send an error log, open the History Management screen (clock icon on the home screen) and tap &quot;ログを共有&quot; (Share Log).</p>
+<p>Email: digital-tool@swing-w.com</p>
+<p>Privacy Policy: <a href="privacy.html">Privacy Policy</a></p>
+</main>
+</body>
+</html>
